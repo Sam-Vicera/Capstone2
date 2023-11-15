@@ -1,0 +1,19 @@
+body {
+    padding-top: 50px;
+}
+#navbar {
+    transition: top 0.5s ease-in-out;
+    top: 0;
+    z-index: 1000;
+}
+#navbar.hidden {
+    top: -90px;
+
+}
+
+#navItem{
+    margin-right: 85px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: larger;
+}

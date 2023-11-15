@@ -45,3 +45,6 @@ Stretch Goals For Mountain:
 Display the image of the mountain along with the mountain information.
 Display sunset and sunrise timings by using the APIs
 My own goal: A button the splits the page into two and allows mountain comparison.
+
+
+![image](selfImages/HomePagePlanning.png)
