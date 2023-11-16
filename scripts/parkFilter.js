@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     
         addParkHeader(parksFilter, parkDiv);
          addImageRow(parksFilter, parkDiv);
-        // addLocationInfo(parksFilter, parkDiv);
+         addLocationInfo(parksFilter, parkDiv);
         // addSeeMoreButton(parksFilter, parkDiv);
     }
     
@@ -88,12 +88,20 @@ document.addEventListener("DOMContentLoaded",()=>{
         imageRow.appendChild(img);
     }
 
-    // function addLocationInfo(parksFilter, parkDiv){
-    //     const infoRow = document.createElement("div");
-    //     infoRow.classList.add("parkInfo");
-    //     parkDiv.appendChild(infoRow);
+    function addLocationInfo(parksFilter, parkDiv){
+        const infoRow = document.createElement("div");
+        infoRow.classList.add("parkInfo");
+        parkDiv.appendChild(infoRow);
 
-    //     let stateNameDisplay = parksFilter.State        
-    //     let cityNameDisplay  = parksFilter.City      
-    //     let AddressNameDisplay =        
-    // }
+        let stateNameDisplay = document.createElement("h5");     
+        let cityNameDisplay  = document.createElement("h5");      
+        let AddressNameDisplay = document.createElement("h5");
+        
+        stateNameDisplay.innerText =  "State: " + parksFilter.State
+        cityNameDisplay.innerText = "State: "+ parksFilter.City
+        AddressNameDisplay.innerText = "State: " +  parksFilter.Address
+
+        infoRow.appendChild(stateNameDisplay);
+        infoRow.appendChild(cityNameDisplay);
+        infoRow.appendChild(AddressNameDisplay);
+    }
