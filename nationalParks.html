@@ -17,8 +17,14 @@
     crossorigin="anonymous"
   ></script>
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/nationalPark.css"/>
+
   <script src="scripts/hiddenNavBar.js"></script>
+  <script src="scripts/nationalParkData.js"></script>
+  <script src="scripts/locationData.js"></script>
+  <script src="scripts/parkTypeData.js"></script>
+  <script src="scripts/parkFilter.js"></script>
 
 </head>
 <body>
@@ -58,8 +64,46 @@
             </div>
           </nav>
     </header>
-    <main>
+    <main id="main">
+      <div class="filter-box">
+        <h3 class="text-center">Find your National Park</h3>
 
+        <div class="form-floating mb-3">
+            <select name="" id="state-select" class="form-select">
+                <option>Show All</option>
+                
+            </select>
+            <label for="state-select">State</label>
+        </div>
+        
+        <div class="form-floating mb-3">
+            <select name="" id="parkType-select" class="form-select">
+                <option>No Preference</option>
+            </select>
+            <label for="parkType-select">Type Of Park</label>
+        </div>
+
+    </div>
+
+    <div id="content" class="content">
+        <div class="product" id="product-1">
+            <div>
+                <h4>Smartphone</h4>
+                <div class="photo">
+                    <img src="/images/products/smartphone.jpg" alt="Smartphone">
+                    <h4 class="price">$499.99</h4>
+                </div>
+                <div>
+                    <p>A powerful and feature-rich smartphone for all your communication needs.</p>
+                </div>
+
+            </div>
+            <div class="add-button">
+                <button class="btn btn-success">Add to Cart</button>
+            </div>
+        </div>
+        
+    </div>  
     </main>
     
 </body>
