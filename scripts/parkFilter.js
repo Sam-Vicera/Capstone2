@@ -23,8 +23,39 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
 function filterParks(){
+    const selectedState = document.getElementById("state-select").value;
+    const selectedParkType = document.getElementById("parkType-select").value;
+//stateFilter
+ parksFilter = nationalParksArray;
+ if(selectedState != "Show All"){
+    parksFilter = nationalParksArray.filter(s => s.State == selectedState)
+   
+ }
 
+    displayParks(parksFilter);
+}
 
+function displayParks(parksFilter) {
 
-    displayParks(nationalParksArray);
+    const parksContainer = document.querySelector("#content")
+    // clear all elements
+    parksContainer.innerText = "";
+
+    parksFilter.forEach(parksFilter => {
+
+        displayPark(parksFilter, parksContainer)
+        
+    });
+}
+
+function displayPark(parksFilter, parentDiv){
+    const parkDiv = document.createElement("div");
+    parkDiv.classList.add("park");
+    parkDiv.id = "park-" + parksFilter.LocationID;
+    
+    parentDiv.appendChild(parkDiv);
+
+    console.log(parkDiv);
+
+    
 }
