@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded",()=>{
         parksFilter = nationalParksArray.filter(s => s.State == selectedState)
         
      }
+     //
+     if(selectedParkType != "No Preference"){
+        parksFilter = parksFilter.filter(s => s.LocationName.includes(selectedParkType))
+     }
      
     
         displayParks(parksFilter);
@@ -40,6 +44,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     function displayParks(parksFilter) {
     
         const parksContainer = document.querySelector("#content")
+        parksContainer.classList.add("text-center");
         // clear all elements
         parksContainer.innerText = "";
     
@@ -56,14 +61,14 @@ document.addEventListener("DOMContentLoaded",()=>{
         parkDiv.id = "park-" + parksFilter.LocationID;
         
         parentDiv.appendChild(parkDiv);
-        console.log(parkDiv);
+        
     
         
     
         addParkHeader(parksFilter, parkDiv);
          addImageRow(parksFilter, parkDiv);
          addLocationInfo(parksFilter, parkDiv);
-        // addSeeMoreButton(parksFilter, parkDiv);
+         addSeeMoreButton(parksFilter, parkDiv);
     }
     
     function addParkHeader(parksFilter, parkDiv){
@@ -78,19 +83,25 @@ document.addEventListener("DOMContentLoaded",()=>{
     
     function addImageRow(parksFilter,parkDiv){
         const imageRow = document.createElement("div");
-        imageRow.classList.add("park-Photo")
+        imageRow.classList.add("park-Photo");
+        imageRow.id = "imageStyling"
         parkDiv.appendChild(imageRow);
     
         const img = document.createElement("img");
+        img.id = "cardImg"
        
-        img.src = "States_Insignias_images/"+ parksFilter.State +".svg.png"
+        img.src = "States_Insignias_images/"+ parksFilter.State +".svg.png";
 
         imageRow.appendChild(img);
     }
 
     function addLocationInfo(parksFilter, parkDiv){
         const infoRow = document.createElement("div");
-        infoRow.classList.add("parkInfo");
+        infoRow.classList.add("text-start");
+        infoRow.classList.add("mt-2");
+        infoRow.classList.add("ms-2");
+        infoRow.id = "locationInformation"
+
         parkDiv.appendChild(infoRow);
 
         let stateNameDisplay = document.createElement("h5");     
@@ -98,10 +109,24 @@ document.addEventListener("DOMContentLoaded",()=>{
         let AddressNameDisplay = document.createElement("h5");
         
         stateNameDisplay.innerText =  "State: " + parksFilter.State
-        cityNameDisplay.innerText = "State: "+ parksFilter.City
-        AddressNameDisplay.innerText = "State: " +  parksFilter.Address
+        cityNameDisplay.innerText = "City: "+ parksFilter.City
+        AddressNameDisplay.innerText = "Address: " +  parksFilter.Address
 
         infoRow.appendChild(stateNameDisplay);
         infoRow.appendChild(cityNameDisplay);
         infoRow.appendChild(AddressNameDisplay);
+    }
+
+    function addSeeMoreButton(parksFilter, parkDiv){
+        const buttonRow = document.createElement("div");
+        parkDiv.appendChild(buttonRow);
+
+        const seeMoreButton = document.createElement("button")
+         seeMoreButton.classList.add("btn");
+         seeMoreButton.classList.add("btn-sm");
+         seeMoreButton.classList.add("btn-danger");
+         seeMoreButton.classList.add("mt-2");
+         seeMoreButton.classList.add("mb-2");
+         seeMoreButton.innerText = "Click here for more Info"
+         buttonRow.appendChild(seeMoreButton);
     }
