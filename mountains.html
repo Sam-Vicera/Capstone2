@@ -17,8 +17,11 @@
     crossorigin="anonymous"
   ></script>
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
   <script src="scripts/hiddenNavBar.js"></script>
+  <script src="scripts/mountainData.js"></script>
+  <script src="scripts/mountainDisplay.js"></script>
+
 
 </head>
 <body>
@@ -51,7 +54,7 @@
                     <a class="nav-link" href="nationalParks.html">National Parks</a>
                   </li>
                   <li class="nav-item" id="navItem">
-                    <a class="nav-link" href="index.html">Mountains</a>
+                    <a class="nav-link" href="mountains.html">Mountains</a>
                   </li>
                 </ul>
               </div>
@@ -59,6 +62,27 @@
           </nav>
     </header>
     <main>
+      <section id="selectBox">
+        <div class="container text-center" style="border: 1px solid; margin-top: 125px; max-width: 325px; min-height: 200px;">
+          <h4 style="border-bottom: 1px solid;">Heading placeholder</h4>
+  
+          <div class="form-floating mb-3">
+            <select name="" id="mountain-select" class="form-select">
+              <option>Select your Mountain</option>
+            </select>
+            <label for="mountain-select">Mountain Name</label>
+          </div>
+          <form>
+            <input type="checkbox" name="Mountain-Comparison" value="Yes"> Compare Mountains
+          </form>
+  
+        </div>
+      </section>
+
+      <section id="mountainDisplay1">
+
+      </section>
+    
 
     </main>
     
