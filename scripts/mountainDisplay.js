@@ -23,18 +23,18 @@ function createContainer(){
      let selectedMountain = document.getElementById("mountain-select").value
 
     if(selectedMountain != "Select your Mountain"){
-    let selectedMountainArray = mountainsArray.filter(mountain => mountain.name.includes(selectedMountain));
-     console.log(selectedMountainArray);
+     
+    let selectedMountainArray = mountainsArray.find(mountain => mountain.name == selectedMountain);
+
+    console.log(selectedMountainArray);
      displayContent(selectedMountainArray);
     }
+
     else {
         console.log("Select your Mountain")
     }
-
-    
-
-  
 }
+
 
 function displayContent(mountainArray){
     const mountainContainer = document.getElementById("mountainDisplay1");
@@ -59,6 +59,6 @@ rowDiv.appendChild(col2);
 
 let imgDiv = document.createElement("img");
 console.log(mountainArray.name)
- imgDiv.src = "images/"+ mountainArray.name ;
+ imgDiv.src = "images/"+ mountainArray.img ;
 col2.appendChild(imgDiv);
 }
