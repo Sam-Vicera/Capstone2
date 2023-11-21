@@ -19,13 +19,36 @@ background: radial-gradient(circle, rgb(167, 167, 174) 0%, rgb(67, 176, 200) 18%
 
 #navItem{
     margin-right: 85px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    font-size: larger;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
     font-style: italic;
 }
+#navItem :hover{
+    border-bottom: 2px solid white;
+    transition: border-color 0.3s ease;
+}
+
 #navItem > a {
     color: black
+}
+#textCol{
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    color: white;
+    text-shadow: 150px 2px 5px #000;
+    
+}
+
+#descriptionParagraphs{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    font-weight: 400;
+    
+}
+#buttonHeadings{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
 }
 
 #parkBackground{
@@ -38,6 +61,24 @@ background: radial-gradient(circle, rgb(167, 167, 174) 0%, rgb(67, 176, 200) 18%
     padding-top: 300px;
     color: white;
 }
+#roundedCarousel{
+    border: 2px solid;
+              z-index: 1;
+              border-radius: 50%;
+              height: 350px;
+              overflow: hidden;
+              padding: 0 !important; 
+              box-shadow: 0 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+#carouselItemsRound{
+    height: 350px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
 
 #mountainBackground{
     background-image: url("/selfImages/photo-1519681393784-d120267933ba.avif");
@@ -45,9 +86,7 @@ background: radial-gradient(circle, rgb(167, 167, 174) 0%, rgb(67, 176, 200) 18%
     min-height: 550px; 
 }
 
-#content{
-   /* placeholder */
-}
+
 .park{
     border: 1px solid;
     margin: 10px ;
@@ -66,5 +105,4 @@ background: radial-gradient(circle, rgb(167, 167, 174) 0%, rgb(67, 176, 200) 18%
     height: 150px;
     width: 150px;
 }
-
 

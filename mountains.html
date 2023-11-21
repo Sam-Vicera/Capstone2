@@ -18,6 +18,7 @@
   ></script>
 
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/mountain.css"/>
   <script src="scripts/hiddenNavBar.js"></script>
   <script src="scripts/mountainData.js"></script>
   <script src="scripts/mountainDisplay.js"></script>
@@ -62,25 +63,33 @@
           </nav>
     </header>
     <main>
-      <section id="selectBox">
-        <div class="container text-center" style="border: 1px solid; margin-top: 125px; max-width: 325px; min-height: 200px;">
-          <h4 style="border-bottom: 1px solid;">Heading placeholder</h4>
-  
-          <div class="form-floating mb-3">
-            <select name="" id="mountain-select" class="form-select">
-              <option>Select your Mountain</option>
-            </select>
-            <label for="mountain-select">Mountain Name</label>
+      <div id="spaceMaker">
+      </div>
+      <div id="spaceMaker2"></div>
+      
+      <div class="d-flex align-items-center justify-content-center">
+        <section id="selectBox">
+          <div class="container text-center" style="border: 1px solid; max-width: 325px; min-height: 250px; ">
+            <h4 style="border-bottom: 1px solid;">Your Next Destination</h4>
+    
+            <div class="form-floating mb-3">
+              <select name="" id="mountain-select" class="form-select">
+                <option>Select your Mountain</option>
+              </select>
+              <label for="mountain-select">Mountain Name</label>
+            </div>
+            <form>
+              <input type="checkbox" name="Mountain-Comparison" value="Yes"> Compare Mountains
+            </form>
+    
           </div>
-          <form>
-            <input type="checkbox" name="Mountain-Comparison" value="Yes"> Compare Mountains
-          </form>
-  
-        </div>
-      </section>
+        </section>
+      </div>
+      <div class="mt-3" id="spaceMaker2"></div>
+     
 
-      <section class="container w-75" id="mountainDisplay1" style="border: 1px solid; margin-top: 75px; min-height: 350px; background-color: antiquewhite;">
-     <div class="row" >
+      <section class="container w-75" id="mountainDisplay1">
+     <!-- <div class="row" >
       <div class="col-5 mt-5" style="border: 1px solid; margin-left: 50px;">
         <h3 class="text-center">Mountain Name</h3>
         
@@ -92,13 +101,13 @@
         
     
       </div>
-      <div class="col mt-5 ms-5" >
+      <div class="col-sm-12 mt-5 ms-5" >
         <img src="images/Garfield-StoryImage.jpg" style="border: 2px solid;">
       </div>
      </div>
         
       </section>
-    
+     -->
 
     </main>
     
