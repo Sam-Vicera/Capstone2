@@ -40,4 +40,11 @@ width: 275px;
 
 .park{
     background-color: wheat;
+    transform: scale(0.95);
+    transition: transform 0.4s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.park:hover{
+    transform: scale(1.0);
 }
