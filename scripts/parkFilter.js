@@ -14,11 +14,17 @@ document.addEventListener("DOMContentLoaded",()=>{
         parkTypesArray.forEach(type => {
             const typeOption = new Option (type)
             parkType.add(typeOption); })
+    
+        const resetButton = document.getElementById("resetButton");
+        resetFilters();
+        
     //
         filterParks();
     
-        stateSelect.addEventListener("change", filterParks)
-        parkType.addEventListener("change", filterParks)
+        stateSelect.addEventListener("change", filterParks);
+        parkType.addEventListener("change", filterParks);
+        resetButton.addEventListener("click", resetFilters);
+        
     })
     
     
@@ -124,3 +130,14 @@ document.addEventListener("DOMContentLoaded",()=>{
          seeMoreButton.innerText = "Click here for more Info"
          buttonRow.appendChild(seeMoreButton);
     }
+
+  
+     function resetFilters() {
+            
+            document.getElementById("state-select").value = "Show All";
+            
+            document.getElementById("parkType-select").value = "No Preference";
+            
+            filterParks();
+        }
+        
