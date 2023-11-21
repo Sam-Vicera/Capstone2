@@ -112,24 +112,48 @@ col2.appendChild(imgDiv);
 function createDuplicatedSelectForm(newNameArray) {
     const parentSelectDiv = document.getElementById("firstSelectDiv");
   
-    
-    if (!document.getElementById("duplicatedSelectForm")) {
-      const duplicatedSelectForm = document.createElement("select");
-      duplicatedSelectForm.id = "duplicatedSelectForm";
-      parentSelectDiv.appendChild(duplicatedSelectForm);
+    if (!document.getElementById("duplicatedSelectContainer")) {
+        
+        const duplicatedSelectContainer = document.createElement("div");
+        duplicatedSelectContainer.id = "duplicatedSelectContainer";
+        parentSelectDiv.appendChild(duplicatedSelectContainer);
   
-
-      newNameArray.forEach((namesArray) => {
-        const mountainChoice = new Option(namesArray);
-        duplicatedSelectForm.add(mountainChoice);
-      });
-    }
+       
+        const labelForNewForm = document.createElement("label");
+        labelForNewForm.for = "duplicatedSelectForm";
+        labelForNewForm.innerText = "Choose your other Mountain";
+        labelForNewForm.id = "newLabel"
+        
+        
+        duplicatedSelectContainer.appendChild(labelForNewForm);
+  
+        const duplicatedSelectForm = document.createElement("select");
+        duplicatedSelectForm.id = "duplicatedSelectForm";
+        duplicatedSelectForm.classList.add("form-select");
+        
+        
+        duplicatedSelectContainer.appendChild(duplicatedSelectForm);
+  
+        newNameArray.forEach((namesArray) => {
+          const mountainChoice = new Option(namesArray);
+          duplicatedSelectForm.add(mountainChoice);
+        });
+      }
   }
+  
+    
+    
 
 function removeDuplicatedSelectForm() {
   const duplicatedSelectForm = document.getElementById("duplicatedSelectForm");
 
   if (duplicatedSelectForm) {
     duplicatedSelectForm.remove();
+
+    const labelForNewForm = document.getElementById("newLabel")
+
+    if(labelForNewForm){
+        labelForNewForm.remove();
+    }
   }
 }
