@@ -12,10 +12,18 @@ document.addEventListener("DOMContentLoaded",()=>{
        mountainSelectList.add(mountainChoice);
     } )
 
-   
+    const checkbox = document.getElementById("checkbox");
 
     mountainSelectList.addEventListener("change", createContainer);
-    
+    checkbox.addEventListener("change",() => {
+        if (checkbox.checked) {
+            // If checkbox is checked
+            createDuplicatedSelectForm(newNameArray);
+          } else {
+            // If checkbox is unchecked
+            removeDuplicatedSelectForm();
+          }
+    })
     // createContainer();
 })
 
@@ -101,3 +109,27 @@ imgDiv.classList.add("imgDisplay", "img-fluid", "mt-2")
 col2.appendChild(imgDiv);
 }
 
+function createDuplicatedSelectForm(newNameArray) {
+    const parentSelectDiv = document.getElementById("firstSelectDiv");
+  
+    
+    if (!document.getElementById("duplicatedSelectForm")) {
+      const duplicatedSelectForm = document.createElement("select");
+      duplicatedSelectForm.id = "duplicatedSelectForm";
+      parentSelectDiv.appendChild(duplicatedSelectForm);
+  
+
+      newNameArray.forEach((namesArray) => {
+        const mountainChoice = new Option(namesArray);
+        duplicatedSelectForm.add(mountainChoice);
+      });
+    }
+  }
+
+function removeDuplicatedSelectForm() {
+  const duplicatedSelectForm = document.getElementById("duplicatedSelectForm");
+
+  if (duplicatedSelectForm) {
+    duplicatedSelectForm.remove();
+  }
+}

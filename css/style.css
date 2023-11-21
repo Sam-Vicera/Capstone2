@@ -17,7 +17,7 @@ background: radial-gradient(circle, rgb(167, 167, 174) 0%, rgb(67, 176, 200) 18%
 #navItem{
     margin-right: 85px;
     font-family: 'Raleway', sans-serif;
-    font-weight: bolder;
+    
     font-size: x-large;
     font-style: italic;
 }
