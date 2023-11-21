@@ -3,7 +3,7 @@
 main
 {
     display: grid;
-    grid-template-columns: 350px auto;
+    grid-template-columns: 350px auto; /* takes up remaining space */
     margin-top: 90px;
     height: 87vh;
     
