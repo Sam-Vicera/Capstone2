@@ -97,9 +97,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     function addLocationInfo(parksFilter, parkDiv){
         const infoRow = document.createElement("div");
-        infoRow.classList.add("text-start");
-        infoRow.classList.add("mt-2");
-        infoRow.classList.add("ms-2");
+        infoRow.classList.add("text-start", "ms-2", "mt-2");
         infoRow.id = "locationInformation"
 
         parkDiv.appendChild(infoRow);
@@ -122,11 +120,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         parkDiv.appendChild(buttonRow);
 
         const seeMoreButton = document.createElement("button")
-         seeMoreButton.classList.add("btn");
-         seeMoreButton.classList.add("btn-sm");
-         seeMoreButton.classList.add("btn-danger");
-         seeMoreButton.classList.add("mt-2");
-         seeMoreButton.classList.add("mb-2");
+         seeMoreButton.classList.add("btn", "btn-sm", "btn-danger", "mt-2", "mb-2");
          seeMoreButton.innerText = "Click here for more Info"
          buttonRow.appendChild(seeMoreButton);
     }

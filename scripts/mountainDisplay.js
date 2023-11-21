@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const checkbox = document.getElementById("checkbox");
 
     mountainSelectList.addEventListener("change", createContainer);
+
     checkbox.addEventListener("change",() => {
         if (checkbox.checked) {
             // If checkbox is checked
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             removeDuplicatedSelectForm();
           }
     })
-    // createContainer();
+    
 })
 
 function createContainer(){
@@ -34,14 +35,16 @@ function createContainer(){
      mountainContainer.innerText = "";
      mountainContainer.classList.add("w-75");
 
+
     if(selectedMountain != "Select your Mountain"){
-     
+        
     let selectedMountainArray = mountainsArray.find(mountain => mountain.name == selectedMountain);
-
-    
      displayContent(mountainContainer,selectedMountainArray);
+     mountainContainer.hidden = false;
     }
-
+   else{
+    mountainContainer.hidden = true;
+   }
 }
 
 
@@ -152,8 +155,7 @@ function removeDuplicatedSelectForm() {
 
     const labelForNewForm = document.getElementById("newLabel")
 
-    if(labelForNewForm){
-        labelForNewForm.remove();
-    }
+    
   }
+  
 }
