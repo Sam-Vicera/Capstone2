@@ -48,3 +48,47 @@ My own goal: A button the splits the page into two and allows mountain compariso
 
 
 ![image](selfImages/HomePagePlanning.png)
+Home page Planning:
+I knew there were certain aesthetics I wanted but as you'll see, the final product differs a bit from what was planned. I wanted to make sure to have a unique navbar with a scrolling effect and a carousel that was inside a rounded container. Below is a snippet of the code used to acquire the effect.
+
+Here is how the latest update to the Home Page looks like:
+
+![image](selfImages/HomePage1.png)
+![image](selfImages/HomePage2.png)
+
+Below is a code snippet of the js for the disappearing NavBar
+
+![image](selfImages/Scroll_code_snippet.png)
+
+A new concept I learned from this addition to my project was the comparison of scroll distance resulting in the addition of classes. I was also able to brushen up my understanding of Css with transition effects and timing.
+
+![image](selfImages/NationalParksPage.png)
+
+The planning on this next page wasn't as thorough due to knowing that the layout would be similar to a previous exercise. My goal was to create the card layout and replicate it for every national park. Once I did that, I moved onto creating the logic that the filters would process in order to display the information that is asked for.
+
+
+
+![image](selfImages/NationalParksPage.png)
+
+Below is an image of the current parks page:
+
+![image](selfImages/NationalParks.png)
+
+Some of the personal features I added/planned on adding include the insignias in each national park card and also a button that would fire a bootstrap modal and display some of the other information such as coordinates and links to other sites if avalible. 
+
+Last but not least the planning for the mountains page would argubably be between the home page and the national park page.
+
+![image](selfImages/MountainsPlanning.png)
+
+The initial design on the left side would meet all the requirements for this project however I also wanted to add another stretch goal on top of the stretch goal of pulling the api of sunset and sunrise timing. The checkbox would cause the innertext of the container I was targetting to reset to nothing and then create a new layout that would be similar to a one row two column layout.
+
+Here is the final layout:
+
+
+![image](selfImages/MountainsPage.png)
+
+The home page and mountains page were both responsive however the parks page wasn't due to a usage of grid and no media query. That would be the first thing that I would want to fix if I was to revisit the project.
+
+Other things to work on include finishing the layout of the mountains page if the checkbox is clicked and making the see more buttons display all the information of the national parks.
+
+Overall I feel that my HTML and Css skills have overall increased and my Javascript knowledge was able to be displayed. 
